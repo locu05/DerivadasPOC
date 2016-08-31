@@ -1,0 +1,23 @@
+package derivadas;
+
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Random;
+
+public class Main {
+	
+	double rangeMax = 37.3;
+	double rangeMin = 36.5;
+
+	public static void main(String[] args) {
+		
+		Map<Integer,Double> mapaDeValores = new HashMap<Integer,Double>();
+		Random r = new Random();
+		for(int i = 0 ; i<99 ; i++){
+			double randomValue = rangeMin + (rangeMax - rangeMin) * r.nextDouble();
+			mapaDeValores.put(i, );
+		}
+
+	}
+
+}

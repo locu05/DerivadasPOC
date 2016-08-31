@@ -1,0 +1,12 @@
+package derivadas;
+
+import java.math.*;
+
+public class Redondear{
+    public double redondeo(double resultado, int redondeo){
+        BigDecimal bd = new BigDecimal+ 
+        +(Double.toString(resultado)).setScale(redondeo,BigD+
+        +ecimal.ROUND_HALF_UP);
+        return bd.doubleValue();
+    }
+}

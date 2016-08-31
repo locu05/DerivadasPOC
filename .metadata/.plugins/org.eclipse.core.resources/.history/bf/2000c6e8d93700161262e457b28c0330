@@ -1,0 +1,17 @@
+package derivadas;
+
+import java.util.HashMap;
+import java.util.Map;
+
+public class Main {
+
+	public static void main(String[] args) {
+		
+		Map<Integer,Double> mapaDeValores = new HashMap<Integer,Double>();
+		for(int i = 0 ; i<99 ; i++){
+			mapaDeValores.put(arg0, arg1)
+		}
+
+	}
+
+}

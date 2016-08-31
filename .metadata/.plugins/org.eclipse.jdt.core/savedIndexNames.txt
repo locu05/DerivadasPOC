@@ -1,0 +1,4 @@
+INDEX VERSION 1.127+/home/mlocurcio/workspaceMio/.metadata/.plugins/org.eclipse.jdt.core
+2674412889.index
+3537772458.index
+728224362.index

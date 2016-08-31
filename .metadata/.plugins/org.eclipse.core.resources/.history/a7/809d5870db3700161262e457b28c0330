@@ -1,0 +1,40 @@
+package derivadas;
+
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Random;
+
+public class Main {
+	
+	public static void main(String[] args) {
+		
+		double rangeMax = 50;
+		double rangeMin = 51;
+		Redondear r = new Redondear();//Objeto que alberga un valor dado de tipo double, redondeado a 2 decimales
+		
+		Map<Integer,Double> mapaDeValores = new HashMap<Integer,Double>();
+		Random random = new Random();
+		for(int i = 0 ; i<99 ; i++){
+			double randomValue = rangeMin + (rangeMax - rangeMin) * random.nextDouble();
+			mapaDeValores.put(i, randomValue);
+		}
+		
+		Derivacion2 primD = new Derivacion2();//Objeto de la clase Derivacion2 que albergara la primera derivada
+		Derivacion2 segD = new Derivacion2();//Objeto de la clase Derivacion2 que albergara la segunda derivada
+		
+		primD.x = Double.parseDouble("1");
+		primD.deltaX = Double.parseDouble("1");
+		
+		for(int i = 0 ; i<99 ; i++){
+			//Calculo de la 1° derivada por la diferencia dividida central
+			primD.centradas = (mapaDeValores.get((primD.x+primD.deltaX,2))-mapaDeValores.get((primD.x-primD.deltaX,2)))/(2*primD.deltaX);
+			//Calculo de la 2° derivada por la diferencia dividida central
+			segD.centradas = (mapaDeValores.get((primD.x+primD.deltaX,2))-2*(mapaDeValores.get(primD.x))+mapaDeValores.get((primD.x-primD.deltaX,2)))/(primD.deltaX*primD.deltaX);
+			//Impresion de los resultados obtenidos
+			System.out.println("El valor aproximado de f'(x) valuada en x="+primD.x+" por diferencia centrada \nes "+(primD.centradas,6)+"\n");
+			System.out.println("El valor aproximado de f''(x) valuada en x="+primD.x+" por diferencia centrada \nes "+(segD.centradas,6));
+		}
+
+	}
+
+}

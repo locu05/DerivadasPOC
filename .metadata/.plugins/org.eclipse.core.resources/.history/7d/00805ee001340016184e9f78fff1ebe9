@@ -1,0 +1,38 @@
+package com.locu.facultad;
+
+public class DesviacionEstandar {
+
+	 public double getVariacionStandard(double[] arrayDeDatos) {
+	  //definición  de variables 
+	  double sumatoria = 0;
+	  double media = 0;
+	  double varianza = 0.0;
+	  double desviacion= 0.0; 
+	   
+	  //petición de datos y sumatoria de todos
+	  for (int i = 0; i<100; i++ ){
+		  
+	   sumatoria = sumatoria + arrayDeDatos[i];
+	    
+	  }
+	  
+	  media = sumatoria / 10; //media aritmetica 
+	  
+	  //se hace la suma de las diferencias respecto a a lamedia
+	  for(int i = 0 ; i<10; i++){
+	   double rango;
+	   rango = Math.pow(valor[i]-media,2f);
+	   varianza = varianza + rango;
+	  }
+	  varianza = varianza/10f;//suma de diferencias sobre "n"
+	  //teniendo ya la varinza solo debemos sacarle raiz cuadrada 
+	  //tendremos la desviación estandar
+	  desviacion = Math.sqrt(varianza);
+	  
+	  //impresion de resultados
+	  System.out.println("Media: "+media);
+	  System.out.println("Varianza: "+varianza);
+	  System.out.println("Desvianción Estándar: "+desviacion);
+	 }
+
+	}
